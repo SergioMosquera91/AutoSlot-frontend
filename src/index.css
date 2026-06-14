@@ -1,0 +1,68 @@
+/* ─── Variables CSS AutoSlot ─────────────────────────── */
+:root {
+  --azul-oscuro:   #0D2137;
+  --azul-primario: #1565C0;
+  --azul-medio:    #1E88E5;
+  --azul-claro:    #E3F2FD;
+  --acento:        #00B4D8;
+  --acento-hover:  #0096B4;
+  --blanco:        #FFFFFF;
+  --gris-fondo:    #F4F7FB;
+  --gris-borde:    #DDE4EE;
+  --gris-texto:    #64748B;
+  --negro:         #0A0E1A;
+  --verde:         #10B981;
+  --rojo:          #EF4444;
+  --amarillo:      #F59E0B;
+  --sombra-sm:     0 2px 8px rgba(13,33,55,0.08);
+  --sombra-md:     0 4px 20px rgba(13,33,55,0.12);
+  --sombra-lg:     0 8px 40px rgba(13,33,55,0.18);
+  --radio:         12px;
+  --radio-lg:      20px;
+  --font-display:  'Syne', sans-serif;
+  --font-body:     'DM Sans', sans-serif;
+  --transition:    all 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--gris-fondo);
+  color: var(--negro);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Scrollbar personalizado ────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--gris-fondo); }
+::-webkit-scrollbar-thumb { background: var(--azul-medio); border-radius: 3px; }
+
+/* ─── Animaciones globales ───────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.05); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.animate-fadeInUp  { animation: fadeInUp  0.5s ease forwards; }
+.animate-fadeIn    { animation: fadeIn    0.4s ease forwards; }
+.animate-slideLeft { animation: slideInLeft 0.4s ease forwards; }
