@@ -4,7 +4,7 @@ import { AuthProvider } from './context/AuthContext';
 import Layout from './components/Layout';
 import RutaProtegida from './components/RutaProtegida';
 import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/Menu';
 import Usuarios from './pages/Usuarios';
 import Descuentos from './pages/Descuentos';
 import Convenios from './pages/Convenios';
