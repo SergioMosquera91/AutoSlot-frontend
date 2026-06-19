@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import './Navbar.css';
 
 const MENU = [
-  { path: '/dashboard',  icon: '⊞', label: 'Dashboard' },
+  { path: '/dashboard',  icon: '⊞', label: 'Inicio' },
   { path: '/usuarios',   icon: '👤', label: 'Usuarios' },
   { path: '/descuentos', icon: '🏷️', label: 'Descuentos' },
   { path: '/convenios',  icon: '🤝', label: 'Convenios' },
