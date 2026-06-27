@@ -1,0 +1,295 @@
+/* ====== Página ====== */
+.pagina {
+  padding: 30px;
+  background: #f4f7fb;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ====== Encabezado ====== */
+.pagina__encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.pagina__titulo {
+  margin: 0;
+  font-size: 2rem;
+  color: #1e293b;
+}
+
+.pagina__sub {
+  margin-top: 5px;
+  color: #64748b;
+}
+
+/* ====== Card ====== */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+/* ====== Botones ====== */
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn--primario {
+  background: #2563eb;
+  color: white;
+}
+
+.btn--primario:hover {
+  background: #1d4ed8;
+}
+
+.btn--ghost {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.btn--ghost:hover {
+  background: #cbd5e1;
+}
+
+.btn--peligro {
+  background: #ef4444;
+  color: white;
+}
+
+.btn--peligro:hover {
+  background: #dc2626;
+}
+
+/* ====== Tabla ====== */
+
+.tabla-wrapper {
+  overflow-x: auto;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla th {
+  background: #1e3a8a;
+  color: white;
+  padding: 14px;
+  text-align: left;
+}
+
+.tabla td {
+  padding: 14px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tabla tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* ====== Badges ====== */
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: white;
+  font-size: .85rem;
+  font-weight: bold;
+}
+
+.badge--verde {
+  background: #16a34a;
+}
+
+.badge--rojo {
+  background: #dc2626;
+}
+
+.badge--ambar {
+  background: #f59e0b;
+}
+
+/* ====== Formulario ====== */
+
+.form-fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.form-input {
+  padding: 11px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: .95rem;
+  transition: .2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+}
+
+.form-input.error {
+  border-color: #dc2626;
+}
+
+.form-error {
+  color: #dc2626;
+  font-size: .8rem;
+  margin-top: 4px;
+}
+
+/* ====== Modal ====== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  width: 800px;
+  max-width: 95%;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: aparecer .25s ease;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e3a8a;
+  color: white;
+  padding: 18px;
+}
+
+.modal__titulo {
+  margin: 0;
+}
+
+.modal__cerrar {
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.modal__cuerpo {
+  padding: 20px;
+}
+
+/* ====== Vacío ====== */
+
+.vacio {
+  text-align: center;
+  padding: 40px;
+}
+
+.vacio__icono {
+  font-size: 55px;
+}
+
+.vacio__texto {
+  color: #64748b;
+}
+
+/* ====== Cargando ====== */
+
+.cargando {
+  text-align: center;
+  padding: 30px;
+  color: #64748b;
+}
+
+/* ====== Toast ====== */
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  animation: aparecer .25s ease;
+}
+
+.toast--exito {
+  background: #16a34a;
+}
+
+.toast--error {
+  background: #dc2626;
+}
+
+/* ====== Responsive ====== */
+
+@media (max-width: 768px) {
+
+  .pagina__encabezado {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .form-fila {
+    grid-template-columns: 1fr;
+  }
+
+  .tabla th,
+  .tabla td {
+    font-size: .85rem;
+    padding: 10px;
+  }
+
+  .modal {
+    width: 95%;
+  }
+}

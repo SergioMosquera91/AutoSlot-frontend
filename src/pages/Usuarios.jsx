@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { usuarioService } from '../services/api';
+import "./Usuarios.css";
 
 const ESTADO_INICIAL = {
   nombreUsuario: '', contrasena: '', nombreCompleto: '',
@@ -76,7 +77,7 @@ export default function Usuarios() {
       await usuarioService.eliminar(id);
       mostrarToast('Usuario eliminado');
       cargar();
-    } catch { mostrarToast('No se pudo eliminar', 'error'); }
+    } catch { mostrarToast("No se pudo eliminar", "error"); }
   };
 
   const listaFiltrada = lista.filter(u =>

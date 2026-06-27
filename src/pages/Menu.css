@@ -12,7 +12,7 @@
   font-family: var(--fuente-titulo);
   font-size: 1.55rem;
   font-weight: 800;
-  color: var(--blanco);
+  color: var(--negro);
   margin-bottom: 4px;
 }
 .dashboard__fecha {
@@ -25,9 +25,9 @@
   border: 1px solid rgba(255,255,255,.2);
   border-radius: var(--radio);
   padding: 10px 18px;
-  color: var(--blanco);
+  color: var(--negro);
   font-family: var(--fuente-titulo);
-  font-weight: 700;
+  font-weight: 1000;
   font-size: 1.1rem;
   display: flex;
   align-items: center;

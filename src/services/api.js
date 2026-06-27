@@ -30,7 +30,7 @@ export const usuarioService = {
   crear:   (data)  => api.post('/usuario/nuevo', data),
   buscar:  (id)    => api.get(`/usuario/${id}`),
   editar:  (id, d) => api.put(`/usuario/${id}`, d),
-  eliminar:(id)    => api.delete(`/usuario/${id}`),
+  eliminar:(id)    => api.delete(`/usuario/eliminar/${id}`),
   login:   (data)  => api.post('/usuario/login', data),
 };
 

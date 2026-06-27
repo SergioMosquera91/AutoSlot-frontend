@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { usuarioService, descuentoService, convenioService, camaraService } from '../services/api';
-import './Dashboard.css';
+import './Menu.css';
 
 const TARJETAS = [
   { key: 'usuarios',   label: 'Usuarios',   icono: '👤', color: '#2E75B6', ruta: '/usuarios',   },
